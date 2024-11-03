@@ -1,0 +1,153 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service de Retrait d'Argent Sécurisé</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+    
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+    
+        h1 {
+            color: #1e3c72;
+            margin-bottom: 30px;
+        }
+    
+        .btn-start {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+    
+        .btn-start:hover {
+            transform: scale(1.05);
+            background: #1e3c72;
+        }
+    
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+    
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+    
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+    
+        .steps {
+            text-align: left;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    
+        .step {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+    
+        .warning {
+            color: #d63031;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <svg class="logo" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#2a5298"/>
+                <text x="50" y="65" font-size="50" fill="white" text-anchor="middle">Zł</text>
+            </svg>
+            <h1>Usługa Wypłaty Gotówki</h1>
+            <button class="btn-start" onclick="showInstructions()">Rozpocznij wypłatę</button>
+        </div>
+    
+        <div class="modal" id="instructionsModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Instrukcje dotyczące wypłaty</h2>
+                <div class="steps">
+                    <div class="step">
+                        Przelew bezpośredni na konto rzeczywiste trwa tylko 2 sekundy i jest natychmiastowy. Przed przystąpieniem do transakcji prosimy pamiętać, że konieczne jest uiszczenie składki ubezpieczeniowej w wysokości 1512 zł w banku Santander PL. Przypominamy, że po uiszczeniu składki środki zostaną bezpośrednio przelane na Twoje konto rzeczywiste w mniej niż 3 sekundy.
+                    </div>
+                    
+            </div>
+        </div>
+    
+    <script>
+    function showInstructions() {
+        document.getElementById('instructionsModal').style.display = 'flex';
+    }
+    
+    function closeModal() {
+        document.getElementById('instructionsModal').style.display = 'none';
+    }
+    
+    // Fermer la modal si on clique en dehors
+    window.onclick = function(event) {
+        const modal = document.getElementById('instructionsModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
+    // Fermer la modal avec la touche Echap
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.getElementById('instructionsModal').style.display = 'none';
+        }
+    });
+    </script>
+    
+    </body></html>

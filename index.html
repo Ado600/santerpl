@@ -1,0 +1,233 @@
+<html><head>
+    <style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+.header {
+    background: white;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ec0000;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.menu-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.circles-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: white;
+    margin-bottom: 15px;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-text {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.accounts-section {
+    background: white;
+    padding: 15px;
+}
+
+.section-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-name {
+    font-size: 0.9em;
+}
+
+.account-number {
+    color: #666;
+    font-size: 0.8em;
+}
+
+.account-balance {
+    font-weight: bold;
+    
+}
+#price{
+    color: green;
+}
+.welcome{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.available-funds {
+    padding: 15px;
+    font-weight: bold;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.nav-item.active {
+    color: #ec0000;
+}
+</style></head><body>
+    <div class="header">
+        <div class="logo">iSantander</div>
+        <div class="menu-icons">
+            <span>📤</span>
+            <span>🔍</span>
+            <span>☰</span>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Cześć, Elżbieta!</h2>
+    </div>
+
+    <div class="circles-menu">
+        <div class="circle-item">
+            <div class="circle">B</div>
+            <div class="circle-text">BLIK</div>
+        </div>
+        <div class="circle-item">
+            <div class="circle">$</div>
+            <div class="circle-text">Kantor<br>Santander</div>
+        </div>
+        <div class="circle-item">
+            <div class="circle">🚗</div>
+            <div class="circle-text">Transport,<br>Bilety, Usługi</div>
+        </div>
+        <div class="circle-item">
+            <div class="circle">⋯</div>
+            <div class="circle-text">Wszystkie<br>skróty</div>
+        </div>
+    </div>
+
+    <div class="accounts-section">
+        <div class="section-header">
+            KONTA
+            <span>^</span>
+        </div>
+        <div class="welcome">
+        
+            Recentnie otrzymałeś przelew bezpośredni w wysokości 23 212,15 zł na swoje konto w dniu 04/11/2024. Przelew ten jest powiązany z wirtualnym kontem związanym z Twoim kontem Santander. Proszę postępuj zgodnie z dostarczonymi instrukcjami, aby dokonać bezpiecznej wypłaty.é        </div>
+        
+       <div class="account-item">
+            <div>
+                <div class="account-name">Konto Santander</div>
+                <div class="account-number">*9750</div>
+            </div>
+            <div class="account-balance" id="price">23 212, 15 PLN</div>
+        </div>
+        <div class="account-item">
+            <div>
+                <div class="account-name">Konto Select</div>
+                <div class="account-number">*8575</div>
+            </div>
+            <div class="account-balance">00 PLN</div>
+        </div>
+        
+        <div class="account-item">
+            <div>
+                <div class="account-name">Konto24 walutowe w EUR</div>
+                <div class="account-number">*6977</div>
+            </div>
+            <div class="account-balance">0,00 EUR</div>
+        </div>
+
+        <div class="account-item">
+            <div>
+                <div class="account-name">Konto24 walutowe w USD</div>
+                <div class="account-number">*8612</div>
+            </div>
+            <div class="account-balance">0,00 USD</div>
+        </div>
+
+        <div class="available-funds">
+            <span>Dostępne środki</span>
+            <span>35,00 PLN</span>
+        </div>
+    </div>
+    
+
+    <div class="bottom-nav">
+        <div class="nav-item active" onclick="window.location.href='https://santander.pl/dashboard'">
+            <span>🏠</span>
+            Pulpit
+        </div>
+        <div class="nav-item" onclick="window.location.href='konto.html'">
+            <span>🛍️</span>
+            Oferta
+        </div>
+        <div class="nav-item" onclick="window.location.href='https://santander.pl/payments'">
+            <span>💳</span>
+            Płatności
+        </div>
+        <div class="nav-item" onclick="window.location.href='https://santander.pl/history'">
+            <span>⏱️</span>
+            Historia
+        </div>
+        <div class="nav-item" onclick="window.location.href='https://santander.pl/more'">
+            <span>⋯</span>
+            Więcej
+        </div>
+    </div>
+</body></html>
